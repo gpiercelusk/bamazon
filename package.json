@@ -1,0 +1,23 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "hw 10",
+  "main": "bamazonManager.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gpiercelusk/bamazon.git"
+  },
+  "author": "pierce lusk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gpiercelusk/bamazon/issues"
+  },
+  "homepage": "https://github.com/gpiercelusk/bamazon#readme",
+  "dependencies": {
+    "inquirer": "^6.3.1",
+    "mysql": "^2.17.1"
+  }
+}
