@@ -5,7 +5,7 @@ USE bamazon_DB;
 
 CREATE TABLE products(
   id INT NOT NULL AUTO_INCREMENT,
-  item_name VARCHAR(50) NOT NULL,
+  item_name VARCHAR(100) NOT NULL,
   department VARCHAR(50),
   price DECIMAL(10,2) NULL,
   stock_quantity INT(20) NOT NULL,
@@ -23,3 +23,5 @@ VALUES  ("Audio-Technica AT-LP60XBT-BK", "Electronics", 129, 5),
         ("One Piece: Season 1", "Home Video", 24.99, 120),
         ("Kit Kat Maccha Green Tea Flavor", "Candy",  20.99, 8), 
         ("Knoppers", "Candy", 9.98, 100);
+        
+SELECT * FROM products;
