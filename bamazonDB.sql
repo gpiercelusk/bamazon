@@ -12,16 +12,16 @@ CREATE TABLE products(
   PRIMARY KEY (id)
 );
 
-INSERT INTO products(item_name, department, price, stock_quanity)
+INSERT INTO products(item_name, department, price, stock_quantity)
 VALUES  ("Audio-Technica AT-LP60XBT-BK", "Electronics", 129, 5), 
-        ("Superman: Red Son", "Books", 14.39, 10), 
+        ("Superman: Red Son", "Books", 14.50, 10), 
         ("Pandemic Legacy: Season 1", "Board Games", 55, 20), 
-        ("Pandemic Legacy: Season 2", "Board Games", 79.99, 32)
-        ("Nachtmann Vivendi Bordeaux Glasses(4 pack)", "Housewares", 59.95, 12), 
+        ("Pandemic Legacy: Season 2", "Board Games", 79.99, 32),
+        ("Nachtmann Vivendi Bordeaux Glasses(4 pack)", "Housewares", 59.99, 12), 
         ("Lamb: The Gospel According to Biff, Christ's Childhood Pal", "Books", 14.50, 99), 
-        ("65-Inch 4K Ultra LED TV", "Electronics", 1099.98, 42), 
+        ("65-Inch 4K Ultra LED TV", "Electronics", 1099.99, 42), 
         ("One Piece: Season 1", "Home Video", 24.99, 120),
         ("Kit Kat Maccha Green Tea Flavor", "Candy",  20.99, 8), 
-        ("Knoppers", "Candy", 9.98, 100);
+        ("Knoppers", "Candy", 9.99, 100);
         
 SELECT * FROM products;
