@@ -7,7 +7,7 @@ Node.js &amp; MySQL Homework: Bamazon is an Amazon-like storefront with the MySQ
 **Customer welcome and select item**
 ![Customer welcome](/screenshots/customer%20welcome%20and%20inventory%20list.png)
 
-**Customer welcome and select item**
+**Customer Receipt**
 ![receipt](/screenshots/purchase%20by%20id%20and%20receipt.png)
 
 ### Manager
