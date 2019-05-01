@@ -66,7 +66,7 @@ function updateProduct(id, initialUnits, units, whatYouBought, price, productSal
     [
       {
         stock_quantity: initialUnits - units,
-        //product_sales: productSales + price * units
+        product_sales: productSales + price * units
       },
       {
         id: id

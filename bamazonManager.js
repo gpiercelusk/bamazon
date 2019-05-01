@@ -23,7 +23,7 @@ function managerUser() {
     {
       type: "list",
       name: "manager",
-      message: "Select a managerial action:",
+      message: "Select a managerial action:\n",
       choices: [
         "View Items for Sale",
         "View Low Stock",
@@ -113,7 +113,7 @@ function updateItem(id, initialUnits, units) {
       }
     ],
     function (err) {
-      if (err) throw err
+      if (err) throw err;
       console.log(lineBreak + "\nProduct inventory updated. Product ID #" + id + " increased inventory by " + units + " units.");
       console.log(lineBreak);
       managerUser();
@@ -121,5 +121,41 @@ function updateItem(id, initialUnits, units) {
 }
 
 function addNew() {
-
+  inquirer.prompt([
+    {
+      type: 'input',
+      name: 'item_name',
+      message: 'Input name of the product:',
+    },
+    {
+      type: 'input',
+      name: 'department',
+      message: 'Input department name:',
+    },
+    {
+      type: 'input',
+      name: 'price',
+      message: 'Input product price ($00.00): $',
+    },
+    {
+      type: 'input',
+      name: 'stock_quantity',
+      message: 'Input amount available for purchase:'
+    },
+  ]).then(function (res) {
+    connection.query(
+      "INSERT INTO products SET ?",
+      {
+        item_name: res.item_name,
+        department: res.department,
+        price: res.price,
+        stock_quantity: res.stock_quantity,
+      },
+      function (err) {
+        if (err) throw err;
+        console.log(lineBreak + res.item_name + " was added to: " + res.department + " at $" + res.price + " with a stock of " + res.stock_quantity + lineBreak);
+        managerUser();
+      }
+    );
+  });
 }
