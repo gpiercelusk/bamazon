@@ -55,7 +55,7 @@ function viewItems() {
   connection.query("SELECT * FROM products", function (err, res) {
     if (err) throw err;
     for (var i = 0; i < res.length; i++) {
-      console.log("ID: " + res[i].id + "| Item: " + res[i].item_name + "| Price: $" + res[i].price + "| Quantity: " + res[i].stock_quantity);
+      console.log("ID: " + res[i].id + "| Item: " + res[i].item_name + "| Department: " + res[i].department + "| Price: $" + res[i].price + "| Quantity: " + res[i].stock_quantity);
     };
     console.log(lineBreak);
     managerUser();
@@ -83,7 +83,7 @@ function addStock() {
     {
       type: "input",
       name: "howMany",
-      message: "How many would came in?"
+      message: "How many came in?"
     }
   ]).then(function (res) {
     checkId(res.chooseId, res.howMany)
