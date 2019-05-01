@@ -28,7 +28,8 @@ function managerUser() {
         "View Items for Sale",
         "View Low Stock",
         "Receive Inventory",
-        "Add New Item to Inventory"
+        "Add New Item to Inventory",
+        "Exit"
       ]
     }
   ]).then(function (res) {
@@ -44,6 +45,8 @@ function managerUser() {
     } else if (res.manager === "Add New Item to Inventory") {
       console.log(lineBreak);
       addNew();
+    } else {
+      connection.end();
     }
   });
 }
