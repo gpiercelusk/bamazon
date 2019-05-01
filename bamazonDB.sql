@@ -22,7 +22,7 @@ VALUES  ("Audio-Technica AT-LP60XBT-BK", "Electronics", 129, 5),
         ("65-Inch 4K Ultra LED TV", "Electronics", 1099.99, 42), 
         ("One Piece: Season 1", "Home Video", 24.99, 120),
         ("Kit Kat Maccha Green Tea Flavor", "Candy",  20.99, 8), 
-        ("Knoppers", "Candy", 9.99, 100);
+        ("Knoppers", "Candy", 9.99, 100),
         ("Diego", "Dogs", 10000000, 1);
         
 SELECT * FROM products;
