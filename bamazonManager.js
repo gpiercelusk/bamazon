@@ -33,17 +33,47 @@ function managerUser() {
     }
   ]).then(function (res) {
     if (res.manager === "View Items for Sale") {
-      console.log("\n");
+      console.log(lineBreak);
       viewItems();
     } else if (res.manager === "View Low Stock") {
-      console.log("\n");
+      console.log(lineBreak);
       readLowStock();
     } else if (res.manager === "Add Stock") {
-      console.log("\n");
+      console.log(lineBreak);
       addStock();
     } else if (res.manager === "Add to Inventory") {
-      console.log("\n");
+      console.log(lineBreak);
       addInventory();
     }
   });
+}
+
+function viewItems() {
+  connection.query("SELECT * FROM products", function (err, res) {
+    if (err) throw err;
+    for (var i = 0; i < res.length; i++) {
+      console.log("ID: " + res[i].id + "| Item: " + res[i].item_name + "| Price: $" + res[i].price + "| Quantity: " + res[i].stock_quantity);
+    };
+    console.log(lineBreak);
+    managerUser();
+  });
+}
+
+function readLowStock() {
+  connection.query("SELECT * FROM products WHERE stock_quantity <= 5", function (err, res) {
+    if (err) throw err;
+    for (var i = 0; i < res.length; i++) {
+      console.log("ID: " + res[i].id + "| Item: " + res[i].item_name + "| Quantity: " + res[i].stock_quantity);
+    };
+    console.log(lineBreak);
+    managerUser();
+  });
+}
+
+function addStock() {
+
+}
+
+function addInventory() {
+
 }
