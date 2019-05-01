@@ -85,8 +85,3 @@ function viewDept() {
     });
 }
 
-function createNewDept() {
-  inquirer.prompt([
-
-  ]);
-}
