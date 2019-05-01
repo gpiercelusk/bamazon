@@ -150,6 +150,7 @@ function addNew() {
         department: res.department,
         price: res.price,
         stock_quantity: res.stock_quantity,
+        product_sales: 0
       },
       function (err) {
         if (err) throw err;
